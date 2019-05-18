@@ -12,7 +12,7 @@
 using namespace std; 
  
 /*function to calculate the modular exponentiation,
-Time complexity of the functon is : O(log(exponent)) */
+Time complexity of the functon is : O(log(exponent)) or O(log(y)) */
 
 ll modpow(ll base, ll exponent, ll modulus)
 {
