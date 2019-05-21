@@ -1,0 +1,25 @@
+
+Algorithm
+
+Read x,y,m. x is the base, y is the power and m is the divisor.
+
+First, if m==1 or x==0 print 0. else call the recursive function func.
+
+The function takes x,y,m as parameters. Inside the function, initialise keep with 0, and declare variables to be used i and temp. Assign temp=y.
+
+if y==1 return x%m
+else if y==0 return 1
+
+else
+{
+calculate keep which is the max number of times x can be raised to power of power of 2 before it the power of 2 crosses y. 
+
+assign temp = x. Now find temp%m and store in temp. Just to simplify if temp is greater than m/2, temp=temp-m.
+
+now iterate a loop for keep-1 times. inside the loop assign temp*=temp and then temp=temp%m again if temp is more than m/2 then again temp is temp-m. 
+
+Once loop done recall the function in the return statement by returning
+temp*func(....) with parameters x , y-pow(2,keep-1) , m. 
+}
+
+In the main function, just print func(x,y,m).
